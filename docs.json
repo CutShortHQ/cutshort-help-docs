@@ -103,5 +103,10 @@
     "socials": {
       "website": "https://cutshort.io"
     }
+  },
+  "integrations": {
+    "gtm": {
+      "tagId": "GTM-N3J879"
+    }
   }
 }
