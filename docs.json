@@ -1,0 +1,107 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Cutshort Help",
+  "description": "Help articles for employers and candidates on Cutshort.",
+  "theme": "mint",
+  "colors": {
+    "primary": "#2D6A4F",
+    "light": "#40916C",
+    "dark": "#1B4332"
+  },
+  "background": {
+    "decoration": "grid",
+    "color": {
+      "light": "#FAFAFA",
+      "dark": "#0A0A0A"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Employers",
+        "groups": [
+          {
+            "group": "Account",
+            "pages": ["employers/account-not-approved"]
+          },
+          {
+            "group": "Talent cards",
+            "pages": [
+              "employers/what-is-a-talent-card",
+              "employers/unlock-talent-card"
+            ]
+          },
+          {
+            "group": "Billing",
+            "pages": [
+              "employers/download-invoices",
+              "employers/plan-activation"
+            ]
+          },
+          {
+            "group": "AI Screener",
+            "pages": ["employers/configure-ai-screener"]
+          },
+          {
+            "group": "ATS",
+            "pages": [
+              "employers/connect-lever",
+              "employers/integrate-workable",
+              "employers/integrate-zoho-recruit",
+              "employers/connect-greenhouse"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Candidates",
+        "groups": [
+          {
+            "group": "Applications",
+            "pages": [
+              "candidates/companies-not-replying",
+              "candidates/automated-replies"
+            ]
+          },
+          {
+            "group": "Profile and privacy",
+            "pages": [
+              "candidates/update-resume",
+              "candidates/hide-from-employer",
+              "candidates/delete-profile"
+            ]
+          },
+          {
+            "group": "AI interviews",
+            "pages": [
+              "candidates/what-are-ai-interviews",
+              "candidates/ai-screener-faqs"
+            ]
+          },
+          {
+            "group": "Mobile",
+            "pages": ["candidates/mobile-job-alerts"]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Cutshort",
+        "href": "https://cutshort.io"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Open Cutshort",
+      "href": "https://cutshort.io"
+    }
+  },
+  "footer": {
+    "socials": {
+      "website": "https://cutshort.io"
+    }
+  }
+}
