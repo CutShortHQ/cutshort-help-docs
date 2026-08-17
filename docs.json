@@ -69,7 +69,8 @@
             "group": "Applications",
             "pages": [
               "candidates/companies-not-replying",
-              "candidates/automated-replies"
+              "candidates/automated-replies",
+              "candidates/view-respond-employer-messages"
             ]
           },
           {
