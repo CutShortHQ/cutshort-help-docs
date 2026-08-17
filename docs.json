@@ -66,6 +66,10 @@
         "tab": "Candidates",
         "groups": [
           {
+            "group": "Finding jobs",
+            "pages": ["candidates/search-and-filter-jobs"]
+          },
+          {
             "group": "Applications",
             "pages": [
               "candidates/companies-not-replying",
@@ -77,6 +81,7 @@
             "group": "Profile and privacy",
             "pages": [
               "candidates/update-resume",
+              "candidates/resume-upload-issues",
               "candidates/hide-from-employer",
               "candidates/delete-profile"
             ]
