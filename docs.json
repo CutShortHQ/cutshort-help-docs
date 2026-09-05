@@ -34,6 +34,10 @@
             "pages": ["employers/account-not-approved"]
           },
           {
+            "group": "Jobs",
+            "pages": ["employers/post-job-build-pipeline"]
+          },
+          {
             "group": "Talent database",
             "pages": [
               "employers/search-relevant-candidates",
