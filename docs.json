@@ -41,6 +41,7 @@
             "group": "Talent database",
             "pages": [
               "employers/search-relevant-candidates",
+              "employers/search-filters",
               "employers/find-top-50-candidates"
             ]
           },
