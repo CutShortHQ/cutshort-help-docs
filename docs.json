@@ -34,6 +34,10 @@
             "pages": ["employers/account-not-approved"]
           },
           {
+            "group": "Talent database",
+            "pages": ["employers/find-top-50-candidates"]
+          },
+          {
             "group": "Talent cards",
             "pages": [
               "employers/what-is-a-talent-card",
@@ -46,6 +50,10 @@
               "employers/download-invoices",
               "employers/plan-activation"
             ]
+          },
+          {
+            "group": "Pricing and sales",
+            "pages": ["employers/hiring-plans-pricing-and-callback"]
           },
           {
             "group": "AI Screener",
@@ -67,7 +75,10 @@
         "groups": [
           {
             "group": "Finding jobs",
-            "pages": ["candidates/search-and-filter-jobs"]
+            "pages": [
+              "candidates/search-and-filter-jobs",
+              "candidates/is-cutshort-paid-for-job-seekers"
+            ]
           },
           {
             "group": "Applications",
