@@ -35,7 +35,10 @@
           },
           {
             "group": "Talent database",
-            "pages": ["employers/find-top-50-candidates"]
+            "pages": [
+              "employers/search-relevant-candidates",
+              "employers/find-top-50-candidates"
+            ]
           },
           {
             "group": "Talent cards",
