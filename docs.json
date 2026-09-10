@@ -70,6 +70,7 @@
           {
             "group": "ATS",
             "pages": [
+              "employers/connect-breezy",
               "employers/connect-lever",
               "employers/integrate-workable",
               "employers/integrate-zoho-recruit",

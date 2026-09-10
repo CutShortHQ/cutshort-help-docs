@@ -1,0 +1,100 @@
+---
+title: "How do I connect Cutshort with Breezy HR?"
+description: "Connect Breezy HR with an API key so you can import jobs and send candidates from Cutshort to Breezy."
+---
+
+Connect Breezy HR with a personal access token (API key). After that you can import a published Breezy job into Cutshort and export candidates back to that job.
+
+## Before you start
+
+You need:
+
+- A Breezy admin account with **API access** enabled
+- Permission to create a personal access token in Breezy
+
+If you do not see **API Keys** in Breezy, ask a Breezy admin to turn on API access or create the key for you. Breezy documents this in [Can I generate a Breezy API Access Token?](https://help.breezy.hr/en/articles/15948850-can-i-generate-a-breezy-api-access-token)
+
+## 1. Create an API key in Breezy
+
+Use a **personal access token** (PAT). Do not use a session token from Breezy sign-in.
+
+1. In Breezy, click your profile icon in the left sidebar.
+2. Click **My Settings**.
+3. Open the **API Keys** tab.
+4. Click **+ Create API Key**.
+5. Name it something like `Cutshort`.
+6. Choose an expiration timeframe.
+7. Click **Create Key**.
+8. Copy the token immediately. Breezy shows it only once. It starts with `breezy_pat`.
+
+If someone is removed from your Breezy account, their token stops working. Create a new key and reconnect in Cutshort.
+
+## 2. Add the key in Cutshort
+
+1. On Cutshort, open **Settings** → **Integrations** ([cutshort.io/profile/hiring-settings/integrations](https://cutshort.io/profile/hiring-settings/integrations)).
+2. Under **ATS integrations**, choose **Breezy HR**.
+3. Paste the token in **API key**.
+4. Leave **Company ID (optional)** blank if you have one Breezy company. If you have more than one, you can pick the company later when you import a job.
+5. Click **Connect ATS**.
+
+When it works, you will see **Breezy HR connected**. You can **Reconnect** or **Delete** the key from the same card.
+
+You can also paste the same key from a job pipeline stage: open the stage → choose **Export to ATS** → **Breezy HR**.
+
+## 3. Import a job from Breezy
+
+After Breezy is connected, **Jobs** ([cutshort.io/profile/employer-dashboard](https://cutshort.io/profile/employer-dashboard)) shows **Import from ATS**.
+
+1. Click **Import from ATS**.
+2. If you have more than one Breezy company, choose **Breezy company**.
+3. Choose a job from Breezy. Only **published** positions appear.
+4. Choose whether to send applications back automatically:
+   - **Yes, send only matching applications (recommended)**
+   - **Yes, send all applications**
+   - **No. I will do manual export.**
+5. If automatic export is on, choose which Breezy stage new applications should land in.
+6. Click **Continue** and finish job setup on Cutshort.
+
+Jobs you have already imported are marked **Already imported**.
+
+## 4. Export candidates from the pipeline
+
+On any job pipeline ([cutshort.io/profile/workflow](https://cutshort.io/profile/workflow)), open a stage and set the action to **Export to ATS**.
+
+Choose **Breezy HR**, pick the Breezy **Jobs** and **Stages**, then save. Candidates who enter that stage are created on the Breezy position.
+
+On the **Applications** stage you can also choose to send only matching applications or all applications.
+
+## What Cutshort sends to Breezy
+
+When a candidate is exported, Cutshort creates them on the Breezy position and attaches their resume. These fields are set:
+
+- **Name**
+- **Email**
+- **Phone** (if we have it)
+- **Origin** — sourced
+- **Source** — Cutshort
+- **Stage** — the Breezy stage you selected
+- **Summary** — experience, current and expected salary (INR), notice period, and the application highlight when available
+- **Resume** file
+
+Cutshort does not change your existing Breezy candidates or pipeline stages.
+
+## If something goes wrong
+
+- **No API Keys tab in Breezy** — your account may not have API access. A Breezy admin needs to enable it.
+- **Connect ATS fails** — paste the full token, including the `breezy_pat` prefix. Create a new key if you closed the dialog without copying it.
+- **No Breezy companies found** — the token is tied to the Breezy user who created it. Use a key from someone who can see the company.
+- **No jobs listed** — only published Breezy positions appear. Publish the role in Breezy, or pick another company if you have more than one.
+- **Multiple companies** — choose **Breezy company** on Import, or enter **Company ID** when you connect.
+- **Export shows failed** — confirm **Breezy HR connected** under Settings → Integrations, then check the stage still points at the right Breezy job and stage.
+- **Need to rotate the key** — in Breezy, create a new PAT. In Cutshort, click **Reconnect** (or **Delete**, then connect again). Candidates already exported stay in Breezy.
+
+Something else? Chat with us on [cutshort.io](https://cutshort.io).
+
+## Related
+
+- [How do I post jobs to build a top candidate pipeline quickly?](/employers/post-job-build-pipeline)
+- [How do I connect Cutshort with Greenhouse ATS](/employers/connect-greenhouse)
+- [How do I connect Cutshort with Lever.co?](/employers/connect-lever)
+- [How do I integrate Workable ATS with Cutshort pipeline?](/employers/integrate-workable)
