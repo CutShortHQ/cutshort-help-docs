@@ -1,0 +1,66 @@
+---
+title: "How do I connect Cutshort with Claude, Cursor or other AI agents?"
+description: "Connect Claude, Cursor, or another MCP client to Cutshort so you can search candidates and run hiring workflows from your AI agent."
+---
+
+Connect Cutshort to Claude, Cursor, or any other MCP-compatible AI agent with your workspace API key. From the agent you can search the talent database, review candidates, and — with a production key — post jobs and reach out.
+
+[Watch how to set up Cutshort with your AI agent](https://app.storylane.io/share/pgnewri22kwe)
+
+<iframe
+  src="https://app.storylane.io/demo/pgnewri22kwe?embed=inline"
+  title="How to set up Cutshort with your AI agent"
+  width="100%"
+  height="520"
+  allow="fullscreen"
+  allowFullScreen
+  style={{ border: "1px solid #EAEAEA", borderRadius: "8px" }}
+/>
+
+## What you can do from the agent
+
+- Search candidates and review a shortlist
+- Open candidate details (this uses unlock credits)
+- With a **Production** key: post jobs, invite people to apply, send follow-ups, and move applications in the pipeline
+
+The same API key and quotas apply whether you use MCP or the REST API. Full setup, client config, and tool list: [MCP server](https://developers.cutshort.io/guides/mcp-server).
+
+## 1. Generate an API key
+
+1. Open **Settings** → **Integrations** ([cutshort.io/profile/hiring-settings/integrations](https://cutshort.io/profile/hiring-settings/integrations)).
+2. Under **API Key and MCP Server**, choose **Eval access (read-only with low limits)** or **Production access (full access)**.
+3. Click **Generate API Key**.
+
+Eval keys are available to approved employers after you verify a work email. Production keys add job posting and messaging, and need production access on a paid plan.
+
+Copy the key when it is shown. You can **Reveal** it again later from the same page.
+
+## 2. Add Cutshort to Claude, Cursor, or another agent
+
+Use the Cutshort MCP endpoint `https://mcp.cutshort.io/mcp` and send your key as `Authorization: Bearer cs_live_<your-api-key>`.
+
+Exact config for Claude Desktop, Cursor, and `mcp-remote` is in the [MCP server guide](https://developers.cutshort.io/guides/mcp-server). After you add it, restart the client. You should see **cutshort** in the agent’s tool list.
+
+## 3. Start hiring from the agent
+
+Tell the agent who you want to hire. For example:
+
+> I'm hiring a senior backend engineer in Bangalore, 4–8 years, strong on Go and Kubernetes, 25–45 LPA. Search Cutshort and show me the top matches with headline, experience, and a short fit reason from the resume text.
+
+With a production key you can then post a job, invite shortlisted people, and follow up from the same chat.
+
+## If something goes wrong
+
+- **Generate API Key is disabled** — verify a work email and wait until the employer account is approved.
+- **Production access is not enabled** — email [hello@cutshort.io](mailto:hello@cutshort.io?subject=Cutshort%20API%20production%20access%20request). Available on paid plans only.
+- **cutshort does not appear in the agent** — check the MCP config, restart Claude or Cursor, and confirm the key still works on **Settings** → **Integrations**. Claude Desktop needs Node.js 18+.
+- **Write tools (post job, invite, message) are missing** — those only register on a production key.
+
+Something else? Chat with us on [cutshort.io](https://cutshort.io), or email [engineering@cutshort.io](mailto:engineering@cutshort.io) from the email on your Cutshort account.
+
+## Related
+
+- [How do I integrate Cutshort with hiring tools and workflows using the API?](/employers/integrate-api)
+- [How do I use search filters to find more relevant candidates?](/employers/search-filters)
+- [How do I search relevant candidates on Cutshort?](/employers/search-relevant-candidates)
+- [How do I post jobs to build a top candidate pipeline quickly?](/employers/post-job-build-pipeline)

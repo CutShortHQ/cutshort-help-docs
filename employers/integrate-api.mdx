@@ -1,0 +1,65 @@
+---
+title: "How do I integrate Cutshort with hiring tools and workflows using the API?"
+description: "Use the Cutshort API to connect your ATS or custom hiring tools to the talent database, then search, unlock, and run outreach from your own workflow."
+---
+
+Use the Cutshort Public API to connect Cutshort with your ATS or custom hiring tools. You can search the talent database, unlock candidates, post jobs, and run outreach from your own product or workflow.
+
+If we already have a built-in connector for your ATS, use that instead — see [Ashby](/employers/connect-ashby), [Breezy HR](/employers/connect-breezy), [Lever](/employers/connect-lever), [Workable](/employers/integrate-workable), [Zoho Recruit](/employers/integrate-zoho-recruit), and [Greenhouse](/employers/connect-greenhouse).
+
+## What you can use this for
+
+- Connect Cutshort to an ATS that does not have a built-in integration
+- Pipe search results into an internal hiring tool, spreadsheet, or automation
+- Search, unlock, post jobs, and message candidates from a custom workflow
+
+Start with [Search talent database](https://developers.cutshort.io/api-reference/search/search-talent-database). The rest of the API (candidate detail, jobs, outreach, applications) is in the [developer docs](https://developers.cutshort.io).
+
+If you build an ATS, recruiting agent, or similar hiring product, get a partner license. Email [partnerships@cutshort.io](mailto:partnerships@cutshort.io).
+
+## 1. Generate an API key
+
+1. Open **Settings** → **Integrations** ([cutshort.io/profile/hiring-settings/integrations](https://cutshort.io/profile/hiring-settings/integrations)).
+2. Under **API Key and MCP Server**, choose **Eval access (read-only with low limits)** or **Production access (full access)**.
+3. Click **Generate API Key**.
+
+Eval keys are available to approved employers after you verify a work email. They can search and get candidate details within small quotas.
+
+Production keys add job posting and candidate messaging, with higher limits. Production access is available on paid plans. Email [hello@cutshort.io](mailto:hello@cutshort.io?subject=Cutshort%20API%20production%20access%20request) to request it.
+
+Treat the key like a password. You can **Reveal** or **Delete** it later from the same page.
+
+## 2. Search the talent database
+
+Send requests to `https://cutshort.io/api/v1` with:
+
+```http
+Authorization: Bearer cs_live_<your-key>
+```
+
+`GET /search/candidates` is the main search endpoint. You can pass a role description, resume boolean (`inresume`), location, experience, salary, and the same profile filters you use on the website (education, startup background, industry, and so on).
+
+Search hits include headline, experience, and a redacted resume excerpt — not name, email, or phone. Call get-candidate-details when you want contact info (that unlocks the person and uses one credit).
+
+Parameter reference and examples: [Search talent database](https://developers.cutshort.io/api-reference/search/search-talent-database).
+
+## 3. Prefer an AI agent instead?
+
+If you want Claude, Cursor, or another MCP client to call these same endpoints for you, see [How do I connect Cutshort with Claude, Cursor or other AI agents?](/employers/connect-ai-agents).
+
+## If something goes wrong
+
+- **Generate API Key is disabled** — verify a work email and wait until the employer account is approved.
+- **Production access is not enabled** — email [hello@cutshort.io](mailto:hello@cutshort.io?subject=Cutshort%20API%20production%20access%20request). Available on paid plans only.
+- **401 / invalid API key** — **Reveal** the key on **Settings** → **Integrations**, or **Delete** it and generate a new one.
+- **403 / insufficient scope** — eval keys cannot post jobs or send messages. Request a production key.
+- **Building an ATS or recruiting agent** — email [partnerships@cutshort.io](mailto:partnerships@cutshort.io) for a partner license rather than using a regular workspace key.
+
+Something else? Chat with us on [cutshort.io](https://cutshort.io), or email [engineering@cutshort.io](mailto:engineering@cutshort.io) from the email on your Cutshort account.
+
+## Related
+
+- [How do I connect Cutshort with Claude, Cursor or other AI agents?](/employers/connect-ai-agents)
+- [How do I use search filters to find more relevant candidates?](/employers/search-filters)
+- [How do I search relevant candidates on Cutshort?](/employers/search-relevant-candidates)
+- [How do I connect Cutshort with Ashby?](/employers/connect-ashby)

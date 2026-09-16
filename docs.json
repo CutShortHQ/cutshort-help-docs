@@ -77,6 +77,13 @@
               "employers/integrate-zoho-recruit",
               "employers/connect-greenhouse"
             ]
+          },
+          {
+            "group": "API/MCP",
+            "pages": [
+              "employers/connect-ai-agents",
+              "employers/integrate-api"
+            ]
           }
         ]
       },
