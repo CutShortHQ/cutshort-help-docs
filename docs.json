@@ -70,6 +70,7 @@
           {
             "group": "ATS",
             "pages": [
+              "employers/connect-ashby",
               "employers/connect-breezy",
               "employers/connect-lever",
               "employers/integrate-workable",
