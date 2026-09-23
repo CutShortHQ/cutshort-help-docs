@@ -61,7 +61,10 @@
           },
           {
             "group": "Pricing and sales",
-            "pages": ["employers/hiring-plans-pricing-and-callback"]
+            "pages": [
+              "employers/free-plan-limits",
+              "employers/hiring-plans-pricing-and-callback"
+            ]
           },
           {
             "group": "AI Screener",
