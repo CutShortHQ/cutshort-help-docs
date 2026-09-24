@@ -63,7 +63,9 @@
             "group": "Pricing and sales",
             "pages": [
               "employers/free-plan-limits",
-              "employers/hiring-plans-pricing-and-callback"
+              "employers/hiring-plans-pricing-and-callback",
+              "employers/what-are-ai-credits",
+              "employers/google-sheet-exports"
             ]
           },
           {
