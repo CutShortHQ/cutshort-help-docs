@@ -35,7 +35,10 @@
           },
           {
             "group": "Jobs",
-            "pages": ["employers/post-job-build-pipeline"]
+            "pages": [
+              "employers/post-job-build-pipeline",
+              "employers/keep-jobs-visible-to-candidates"
+            ]
           },
           {
             "group": "Talent database",
