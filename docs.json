@@ -40,6 +40,7 @@
             "group": "Jobs",
             "pages": [
               "employers/post-job-build-pipeline",
+              "employers/how-to-create-a-pipeline-of-applications-on-my-job-on-cutshort",
               "employers/keep-jobs-visible-to-candidates"
             ]
           },
