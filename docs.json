@@ -31,7 +31,10 @@
         "groups": [
           {
             "group": "Account",
-            "pages": ["employers/account-not-approved"]
+            "pages": [
+              "employers/account-not-approved",
+              "employers/invite-team-members"
+            ]
           },
           {
             "group": "Jobs",
